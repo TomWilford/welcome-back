@@ -1,2 +1,2 @@
 # welcome-back
-Development environment setup record/welcome back script.
+Development environment configuration record && || welcome back script.
