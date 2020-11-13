@@ -55,7 +55,7 @@ sudo npm install -g grunt-cli
 #bower
 sudo npm install -g bower
 
-# Configure PHP (/etc/php7.4/cli/php.ini || /etc/php7.4/apache2/php.ini)
+# Configure PHP (/etc/php/7.4/cli/php.ini || /etc/php/7.4/apache2/php.ini)
 #   memory_limit = 512m
 #   display_errors = On
 #   html_errors = On
