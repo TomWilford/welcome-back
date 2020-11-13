@@ -12,34 +12,30 @@ sudo apt-get -y install curl zip unzip php7.4-mysql php7.4-curl php7.4-ctype php
 sudo phpenmod curl
 
 # PEAR
+wget http://pear.php.net/go-pear.phar
+php go-pear.phar
 sudo pear channel-update PEAR
 sudo pear upgrade PEAR
-
-# Phing
-sudo pear channel-discover pear.phing.info
-sudo pear install phing/phing
 
 # Enable apache modules
 sudo a2enmod rewrite
 sudo a2enmod ssl
 sudo a2enmod headers
-sudo apt-get install libapache2-mod-php7.4
 
 sudo service apache2 restart
 
 # Install Composer
 curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --force --filename=composer
 mkdir -p ~/.composer
-sudo chown -R $USER $HOME/.composer
+sudo chown -R $USER ~/.composer
 
 # MySQL
 sudo apt-get install mysql-server
-sudo apt-get install php7.4-mysql
 
 # gmagick
 sudo apt-get install graphicsmagick libgraphicsmagick1-dev
 sudo pecl install gmagick-beta
-# Create file /etc/php5/conf.d/gmagick.ini and add a line:
+# Create file /etc/php/7.4/mods-available/gmagick.ini and add a line:
 #   extension=gmagick.so
 
 # Git
@@ -48,10 +44,10 @@ git config --global user.name "Tom Wilford"
 git config --global user.email "hello@jollyblueman.com"
 
 # nodejs
-sudo apt-get install python-software-properties
-sudo apt-add-repository ppa:chris-lea/node.js
-sudo apt-get update
-sudo apt-get install nodejs
+# check for up-to-date node release here:
+#   https://github.com/nodesource/distributions
+curl -sL https://deb.nodesource.com/setup_current.x | sudo -E bash -
+sudo apt-get install -y nodejs
 
 #grunt
 sudo npm install -g grunt-cli
@@ -75,3 +71,4 @@ php -v
 apachectl -v
 composer --version
 node -v
+
