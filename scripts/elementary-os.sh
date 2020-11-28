@@ -14,6 +14,9 @@ apt upgrade
 # Cleanup
 apt autoremove -y && apt autoclean -y
 
+# Get git
+sudo apt install git
+
 # Nice icon & cursor pack
 mkdir ~/.icons && cd ~/.icons
 git clone https://github.com/keeferrourke/la-capitaine-icon-theme.git
@@ -21,6 +24,7 @@ cd la-capitaine-icon-theme && ./configure
 
 sudo add-apt-repository ppa:dyatlov-igor/la-capitaine
 apt install la-capitaine-cursor-theme
+cd ~/
 
 # Restricted extras & multi-media codecs
 apt install ubuntu-restricted-extras libavcodec-extra
@@ -49,13 +53,9 @@ apt install ttf-ancient-fonts
 # Commandline Applications
 apt install snapd
 sudo apt-get install xclip
-sudo apt-get install curl
 
 # GUI Applications
 sudo snap install phpstorm --classic
-fs.inotify.max_user_watches = 524288
-sudo sysctl -p --system
-
 sudo snap install firefox
 sudo snap install spotify
 
