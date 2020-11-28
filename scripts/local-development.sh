@@ -12,8 +12,7 @@ sudo apt-get -y install curl zip unzip php7.4-mysql php7.4-curl php7.4-ctype php
 sudo phpenmod curl
 
 # PEAR
-wget http://pear.php.net/go-pear.phar
-php go-pear.phar
+sudo apt install php-pear
 sudo pear channel-update PEAR
 sudo pear upgrade PEAR
 
@@ -22,7 +21,7 @@ sudo a2enmod rewrite
 sudo a2enmod ssl
 sudo a2enmod headers
 
-sudo service apache2 restart
+sudo systemctl restart apache2
 
 # Install Composer
 curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --force --filename=composer
@@ -30,16 +29,15 @@ mkdir -p ~/.composer
 sudo chown -R $USER ~/.composer
 
 # MySQL
-sudo apt-get install mysql-server
+sudo apt install mysql-server
 
 # gmagick
-sudo apt-get install graphicsmagick libgraphicsmagick1-dev
+sudo apt install graphicsmagick libgraphicsmagick1-dev
 sudo pecl install gmagick-beta
 # Create file /etc/php/7.4/mods-available/gmagick.ini and add a line:
 #   extension=gmagick.so
 
-# Git
-apt install git
+# Setup git 
 git config --global user.name "Tom Wilford"
 git config --global user.email "hello@jollyblueman.com"
 
@@ -47,7 +45,12 @@ git config --global user.email "hello@jollyblueman.com"
 # check for up-to-date node release here:
 #   https://github.com/nodesource/distributions
 curl -sL https://deb.nodesource.com/setup_current.x | sudo -E bash -
-sudo apt-get install -y nodejs
+sudo apt install -y nodejs
+
+# Yarn?
+#curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+#echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+#sudo apt-get update && sudo apt-get install yarn
 
 #grunt
 sudo npm install -g grunt-cli
