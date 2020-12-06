@@ -50,6 +50,12 @@ sudo tlp start
 # Additional (ancient) fonts
 apt install ttf-ancient-fonts
 
+# Change nameserver default to 1.1.1.1
+sudo apt install resolvconf
+nano /etc/resolvconf/resolv.conf.d/tail
+# nameserver 1.1.1.1
+# Ctrl + 0    Enter     Ctrl + X
+
 # Commandline Applications
 apt install snapd
 sudo apt-get install xclip
@@ -58,4 +64,5 @@ sudo apt-get install xclip
 sudo snap install phpstorm --classic
 sudo snap install firefox
 sudo snap install spotify
+sudo apt install filezilla
 
