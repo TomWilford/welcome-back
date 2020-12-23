@@ -66,6 +66,14 @@ sudo npm install -g bower
 #   upload_max_filesize = 32m
 #   default_charset = utf8
 
+#virtual box
+sudo apt install virtualbox -y
+
+#vagrant
+cd /tmp/
+wget https://releases.hashicorp.com/vagrant/2.2.14/vagrant_2.2.14_x86_64.deb
+sudo apt install ./vagrant_2.2.14_x86_64.deb
+
 # Cleanup
 sudo apt-get clean
 
@@ -74,4 +82,5 @@ php -v
 apachectl -v
 composer --version
 node -v
+vagrant --version
 
