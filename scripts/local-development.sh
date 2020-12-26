@@ -73,6 +73,7 @@ sudo apt install virtualbox -y
 cd /tmp/
 wget https://releases.hashicorp.com/vagrant/2.2.14/vagrant_2.2.14_x86_64.deb
 sudo apt install ./vagrant_2.2.14_x86_64.deb
+sudo apt install virtualbox-guest-additions-iso
 
 # Cleanup
 sudo apt-get clean
