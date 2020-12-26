@@ -57,8 +57,9 @@ nano /etc/resolvconf/resolv.conf.d/tail
 # Ctrl + 0    Enter     Ctrl + X
 
 # Commandline Applications
-apt install snapd
-sudo apt-get install xclip
+sudo apt install snapd
+sudo apt install xclip
+sudo apt install net-tools
 
 # GUI Applications
 sudo snap install phpstorm --classic
