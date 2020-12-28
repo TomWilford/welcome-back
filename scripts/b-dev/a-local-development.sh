@@ -73,6 +73,16 @@ sudo apt install virtualbox -y
 cd /tmp/
 wget https://releases.hashicorp.com/vagrant/2.2.14/vagrant_2.2.14_x86_64.deb
 sudo apt install ./vagrant_2.2.14_x86_64.deb
+sudo apt install virtualbox-guest-additions-iso
+sudo visudo
+#   vagrant ALL=(ALL) NOPASSWD:ALL
+#   Defaults:vagrant !requiretty
+sudo vagrant plugin install vagrant-vbguest
+vagrant reload
+#   if non-zero exit status issue with umount /mnt...
+#       sudo vagrant plugin uninstall vagrant-vbguest
+#       sudo vagrant plugin install vagrant-vbguest --plugin-version 0.21
+#       ty to this article https://www.devopsroles.com/vagrant-no-virtualbox-guest-additions-installation-found-fixed/
 
 # Cleanup
 sudo apt-get clean
