@@ -64,5 +64,7 @@ sudo apt-get install xclip
 sudo snap install phpstorm --classic
 sudo snap install firefox
 sudo snap install spotify
+sudo snap install keepassxc
 sudo apt install filezilla
+
 
