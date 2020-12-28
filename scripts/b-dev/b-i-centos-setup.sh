@@ -11,21 +11,21 @@ sudo systemctl enable httpd
 sudo yum -y install mariadb-server mariadb
 sudo systemctl start mariadb
 sudo systemctl enable mariadb
-sudo mysql_secure_installation
+#   sudo mysql_secure_installation
 #   Enter, pwd, y, y, y, y
 #   mysql -u root -p
 
 # php
-sudo yum install php8.0
+sudo yum -y install php8.0
 sudo yum install libapache2-mod-php8.0 php8.0-fpm libapache2-mod-fcgid php8.0-curl php8.0-dev php8.0-gd php8.0-mbstring php8.0-zip php8.0-mysql php8.0-xml
 sudo yum -y install php php-mysql
 sudo yum -y install epel-release
 sudo yum-config-manager --enable remi-php74
-sudo yum update
-sudo yum install http://rpms.remirepo.net/enterprise/remi-release-7.rpm
-sudo yum install yum-utils
-sudo yum install php7.4
-sudo yum install zip unzip php7.4-mysql php7.4-curl php7.4-ctype php7.4-uuid php7.4-iconv php7.4-json php7.4-mbstring php7.4-gd php7.4-intl php7.4-xml php7.4-zip php7.4-gettext php7.4-pgsql php7.4-bcmath php7.4-redis php-memcached php7.4-zip
+sudo yum -y update
+sudo yum -y install http://rpms.remirepo.net/enterprise/remi-release-7.rpm
+sudo yum -y install yum-utils
+sudo yum -y install php7.4
+sudo yum -y install zip unzip php7.4-mysql php7.4-curl php7.4-ctype php7.4-uuid php7.4-iconv php7.4-json php7.4-mbstring php7.4-gd php7.4-intl php7.4-xml php7.4-zip php7.4-gettext php7.4-pgsql php7.4-bcmath php7.4-redis php-memcached php7.4-zip
 update-alternatives --set php /usr/bin/php7.4
 #   || update-alternatives --set php /usr/bin/php8.0
 #         a2enmod php8.0
