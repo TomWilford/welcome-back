@@ -17,7 +17,7 @@ sudo systemctl enable mariadb
 
 # php
 sudo yum -y install php8.0
-sudo yum install libapache2-mod-php8.0 php8.0-fpm libapache2-mod-fcgid php8.0-curl php8.0-dev php8.0-gd php8.0-mbstring php8.0-zip php8.0-mysql php8.0-xml
+sudo yum install libapache2-mod-php8.0 php8.0-fpm libapache2-mod-fcgid php8.0-curl php8.0-dev php8.0-gd php8.0-mbstring php8.0-zip php8.0-mysql php8.0-xml php-simplexml php-mbstring
 sudo yum -y install php php-mysql
 sudo yum -y install epel-release
 sudo yum-config-manager --enable remi-php74
@@ -44,7 +44,11 @@ php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
 HASH="$(wget -q -O - https://composer.github.io/installer.sig)"
 php -r "if (hash_file('SHA384', 'composer-setup.php') === '$HASH') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
 sudo php composer-setup.php --install-dir=/usr/local/bin --filename=composer
-composer init
+mkdir -p ~/.composer
+sudo chown -R $USER ~/.composer
+# cd /var/www/html/
+# composer init
+# composer require --dev vimeo/psalm
 
 # memcached
 yum -y install memcached
