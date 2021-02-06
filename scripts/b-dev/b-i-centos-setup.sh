@@ -51,8 +51,10 @@ sudo chown -R $USER ~/.composer
 # composer require --dev vimeo/psalm
 
 # memcached
-yum -y install memcached
+sudo yum -y install memcached
 # vi /etc/sysconfig/memcached
 # systemctl restart memcached
 systemctl start memcached
 systemctl enable memcached
+sudo yum install php-memcache
+
