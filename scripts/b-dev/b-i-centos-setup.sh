@@ -14,6 +14,9 @@ sudo systemctl enable mariadb
 #   sudo mysql_secure_installation
 #   Enter, pwd, y, y, y, y
 #   mysql -u root -p
+#   (Optional)
+#   SET GLOBAL general_log_file='/var/log/mariadb/general_queries.log';
+#   SET GLOBAL general_log=1;
 
 # php
 sudo yum -y install php8.0
@@ -29,7 +32,21 @@ sudo yum -y install zip unzip php7.4-mysql php7.4-curl php7.4-ctype php7.4-uuid 
 update-alternatives --set php /usr/bin/php7.4
 #   || update-alternatives --set php /usr/bin/php8.0
 #         a2enmod php8.0
-service httpd restart
+
+#   sudo vi /etc/httpd/conf/httpd.conf
+#     LoadModule php7_module modules/libphp7.so
+#     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#     <IfModule dir_module>
+#       DirectoryIndex index.html index.php
+#     </IfModule>
+
+#   (Optional)
+#   sudo vi /etc/php.ini
+#     log_errors = On
+#     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#     error_log  = /var/log/php_errors.log
+#
+sudo systemctl restart httpd
 
 # Permission denied?
 #     sudo setenforce 0
