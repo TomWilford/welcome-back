@@ -39,6 +39,13 @@ update-alternatives --set php /usr/bin/php7.4
 #     <IfModule dir_module>
 #       DirectoryIndex index.html index.php
 #     </IfModule>
+#   sudo systemctl restart httpd
+#
+#   sudo vi /etc/httpd/conf/httpd.conf
+#     User vagrant
+#     Group vagrant
+#   chown -R vagrant:vagrant /tmp/
+#   chown -R vagrant:vagrant /var/lib/php/session
 
 #   (Optional)
 #   sudo vi /etc/php.ini
