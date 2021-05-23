@@ -73,12 +73,21 @@ sudo chown -R $USER ~/.composer
 # cd /var/www/html/
 # composer init
 # composer require --dev vimeo/psalm
+# composer require ext-memcache
 
 # memcached
 sudo yum -y install memcached
-# vi /etc/sysconfig/memcached
+# sudo vi /etc/sysconfig/memcached
+#     PORT="11211"
+#     USER="memcached"
+#     MAXCONN="1024"
+#     CACHESIZE="64"
+#     OPTIONS="-l 127.0.0.1 -U 0"
 # systemctl restart memcached
 systemctl start memcached
 systemctl enable memcached
 sudo yum install php-memcache
+sudo yum install libmemcached
 
+# cli apps
+sudo yum install net-tools
