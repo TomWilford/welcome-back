@@ -64,16 +64,16 @@ sudo systemctl restart httpd
 
 # composer
 cd /tmp
-php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
-HASH="$(wget -q -O - https://composer.github.io/installer.sig)"
-php -r "if (hash_file('SHA384', 'composer-setup.php') === '$HASH') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
-sudo php composer-setup.php --install-dir=/usr/local/bin --filename=composer
-mkdir -p ~/.composer
-sudo chown -R $USER ~/.composer
+curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --force --filename=composer
+sudo chmod +x /usr/local/bin/composer
+vi ~/.bash_profile
+#   PATH=/usr/local/bin:$PATH
 # cd /var/www/html/
 # composer init
 # composer require --dev vimeo/psalm
 # composer require ext-memcache
+# composer require ext-pdo
+# composer require ext-curl
 
 # memcached
 sudo yum -y install memcached
@@ -88,6 +88,18 @@ systemctl start memcached
 systemctl enable memcached
 sudo yum install php-memcache
 sudo yum install libmemcached
+
+# Opcache
+sudo yum-config-manager --enable remi-php74
+sudo yum install php-opcache
+sudo vi /etc/php.d/10-opcache.ini
+#     opcache.enable_cli=1
+#     opcache.memory_consumption=128
+#     opcache.interned_strings_buffer=8
+#     opcache.max_accelerated_files=4000
+#     opcache.revalidate_freq=60
+#     opcache.fast_shutdown=1
+sudo systemctl restart httpd
 
 # cli apps
 sudo yum install net-tools
