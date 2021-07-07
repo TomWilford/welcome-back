@@ -64,7 +64,7 @@ sudo systemctl restart httpd
 
 # composer
 cd /tmp
-curl -sS https://getcomposer.org/installer | sudo php composer-setup.php --install-dir=/usr/local/bin --force --filename=composer
+curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --force --filename=composer
 sudo chmod +x /usr/local/bin/composer
 vi ~/.bash_profile
 #   PATH=/usr/local/bin:$PATH
