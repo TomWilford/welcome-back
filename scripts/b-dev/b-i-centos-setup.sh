@@ -1,5 +1,5 @@
 sudo yum -y update
-sudo yum -y install nano wget
+sudo yum -y install nano wget net-tools zip unzip
 
 # apache
 sudo yum -y install httpd
@@ -19,34 +19,24 @@ sudo systemctl enable mariadb
 #   SET GLOBAL general_log=1;
 
 # php
-sudo yum -y install php8.0
-sudo yum install libapache2-mod-php8.0 php8.0-fpm libapache2-mod-fcgid php8.0-curl php8.0-dev php8.0-gd php8.0-mbstring php8.0-zip php8.0-mysql php8.0-xml php-simplexml php-mbstring
-sudo yum -y install php php-mysql
 sudo yum -y install epel-release
-sudo yum-config-manager --enable remi-php74
-sudo yum -y update
-sudo yum -y install http://rpms.remirepo.net/enterprise/remi-release-7.rpm
 sudo yum -y install yum-utils
-sudo yum -y install php7.4
-sudo yum -y install zip unzip php7.4-mysql php7.4-curl php7.4-ctype php7.4-uuid php7.4-iconv php7.4-json php7.4-mbstring php7.4-gd php7.4-intl php7.4-xml php7.4-zip php7.4-gettext php7.4-pgsql php7.4-bcmath php7.4-redis php-memcached php7.4-zip
-update-alternatives --set php /usr/bin/php7.4
-#   || update-alternatives --set php /usr/bin/php8.0
-#         a2enmod php8.0
-
-#   sudo vi /etc/httpd/conf/httpd.conf
-#     LoadModule php7_module modules/libphp7.so
-#     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#     <IfModule dir_module>
-#       DirectoryIndex index.html index.php
-#     </IfModule>
-#   sudo systemctl restart httpd
-#
-#   sudo vi /etc/httpd/conf/httpd.conf
-#     User vagrant
-#     Group vagrant
-#   chown -R vagrant:vagrant /tmp/
-#   chown -R vagrant:vagrant /var/lib/php/session
-
+sudo yum -y install http://rpms.remirepo.net/enterprise/remi-release-7.rpm
+sudo yum-config-manager --enable remi-php80
+sudo yum -y update
+sudo yum -y install php php-mysql php-memcached php-mbstring php-gd php-zip php-xml
+sudo vi /etc/httpd/conf/httpd.conf
+#  LoadModule php_module modules/libphp8.0.so
+#  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#  <IfModule dir_module>
+#    DirectoryIndex index.html index.php
+#  </IfModule>
+sudo systemctl restart httpd
+sudo vi /etc/httpd/conf/httpd.conf
+#   User vagrant
+#   Group vagrant
+sudo chown -R vagrant:vagrant /tmp/
+sudo chown -R vagrant:vagrant /var/lib/php/session
 #   (Optional)
 #   sudo vi /etc/php.ini
 #     log_errors = On
@@ -90,7 +80,6 @@ sudo yum install php-memcache
 sudo yum install libmemcached
 
 # Opcache
-sudo yum-config-manager --enable remi-php74
 sudo yum install php-opcache
 sudo vi /etc/php.d/10-opcache.ini
 #     opcache.enable_cli=1
@@ -100,6 +89,3 @@ sudo vi /etc/php.d/10-opcache.ini
 #     opcache.revalidate_freq=60
 #     opcache.fast_shutdown=1
 sudo systemctl restart httpd
-
-# cli apps
-sudo yum install net-tools
