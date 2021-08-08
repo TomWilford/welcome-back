@@ -31,6 +31,10 @@ sudo vi /etc/httpd/conf/httpd.conf
 #  <IfModule dir_module>
 #    DirectoryIndex index.html index.php
 #  </IfModule>
+#  <IfModule php_module>
+#    DirectoryIndex index.html default.php index.php
+#    AddHandler application/x-httpd-php .php
+#  </IfModule>
 sudo systemctl restart httpd
 sudo vi /etc/httpd/conf/httpd.conf
 #   User vagrant
