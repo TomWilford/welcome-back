@@ -35,3 +35,8 @@
 ##### Click OK
 #### Click OK
 ## Click OK
+
+# Install Composer
+--------------------------------------------------------------------
+# Download and install the latest version of composer
+## https://getcomposer.org/download/
