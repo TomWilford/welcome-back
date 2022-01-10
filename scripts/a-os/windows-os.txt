@@ -1,0 +1,37 @@
+# Install php
+----------------------------------------------------------------------
+# Download [Thread Safe] version of php
+## https://www.php.net/downloads.php
+# Create folder C:\php
+## Create subfolder for specific php version (if running multiple) 
+### E.g. C:\php\php74
+# Extract downloaded zip file into appropriate php folder
+# Open the folder and locate the php.exe file 
+# Rename the php.exe file to match the version folder
+## E.g. php.exe > php74.exe
+
+# Configure php.ini
+---------------------------------------------------------------------
+# Rename php.ini-development > php.ini
+# Locate "extension_dir" section
+## Add path to appropriate versions extension directory
+### E.g. extension_dir = "C:\php\php74\ext"
+# Enable required extensions by removing leading semi-colon
+## ;extension=curl > extension=curl
+## ;extension=gd > extension=gd
+## ;extension=mbstring > extension=mbstring
+## ;extension=pdo_mysql > extension=pdo_mysql
+
+# Configure Windows 
+--------------------------------------------------------------------
+# Press Windows key, type "Environment Variables" and click to open
+## From the Advanced tab click "Environment Variables" 
+### In "System Variables" click on the "Path" entry
+### Click the "Edit..." button (in the Sytem Variables section)
+#### In the new window that appears
+##### Click New
+##### Type the path to your version of php
+###### E.g. C:\php\php74
+##### Click OK
+#### Click OK
+## Click OK
