@@ -64,6 +64,11 @@
 --------------------------------------------------------------------
 # Open gitbash and type
 ## ssh-keygen -t ecdsa -b 521
+# Start SSH Agent
+## eval `ssh-agent -s`
+## ssh-add
+### You can check it has worked with 
+#### ssh-add -l
 
 # Install Filezilla
 --------------------------------------------------------------------
