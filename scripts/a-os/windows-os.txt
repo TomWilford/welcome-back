@@ -75,3 +75,7 @@
 # Download and install the latest version of Filezilla
 ## https://filezilla-project.org/download.php?type=client
 
+# Install Greenshot
+--------------------------------------------------------------------
+# Download and install the latest version of Greenshot
+## https://getgreenshot.org/downloads/
