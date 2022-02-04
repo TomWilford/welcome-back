@@ -40,3 +40,9 @@
 --------------------------------------------------------------------
 # Download and install the latest version of composer
 ## https://getcomposer.org/download/
+
+# Install Filezilla
+--------------------------------------------------------------------
+# Download and install the latest version of Filezilla
+## https://filezilla-project.org/download.php?type=client
+
