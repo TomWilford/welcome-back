@@ -41,6 +41,30 @@
 # Download and install the latest version of composer
 ## https://getcomposer.org/download/
 
+# Install VirtualBox
+--------------------------------------------------------------------
+# Download the latest version of VirtualBox
+## https://www.virtualbox.org/wiki/Downloads
+# Open downloads folder
+# Right click on VirtualBox .exe file 
+# Run as Administrator
+
+# Install Vagrant
+--------------------------------------------------------------------
+# Download the latest version of Vagrant
+## https://www.vagrantup.com/downloads
+# Press Windows key & type cmd
+# Click Run As Administrator
+## Warning: Run as Admin is tech voodoo here, not sure it's important at all 
+# Navigate to downloads
+## cd C:\Users\UserName\Downloads 
+# Run installer by typing name and pressing enter
+
+# Generate SSH Key
+--------------------------------------------------------------------
+# Open gitbash and type
+## ssh-keygen -t ecdsa -b 521
+
 # Install Filezilla
 --------------------------------------------------------------------
 # Download and install the latest version of Filezilla
