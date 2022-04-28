@@ -59,6 +59,10 @@
 # Navigate to downloads
 ## cd C:\Users\UserName\Downloads 
 # Run installer by typing name and pressing enter
+# Open gitbash and type
+## vagrant plugin install vagrant-vbguest
+## vagrant plugin install vagrant-winnfsd
+
 
 # Generate SSH Key
 --------------------------------------------------------------------
