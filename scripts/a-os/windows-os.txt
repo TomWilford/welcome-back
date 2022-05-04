@@ -63,6 +63,13 @@
 ## vagrant plugin install vagrant-vbguest
 ## vagrant plugin install vagrant-winnfsd
 
+# Install npm
+--------------------------------------------------------------------
+# curl -qL https://www.npmjs.com/install.sh | sh
+
+# Install Sass/scss
+--------------------------------------------------------------------
+## npm install -g sass
 
 # Generate SSH Key
 --------------------------------------------------------------------
