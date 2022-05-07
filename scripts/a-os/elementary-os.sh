@@ -68,4 +68,5 @@ sudo snap install spotify
 sudo snap install keepassxc
 sudo apt install filezilla
 
-
+# Generate SSH Key
+ssh-keygen -t ecdsa -b 521
