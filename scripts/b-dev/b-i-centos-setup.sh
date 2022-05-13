@@ -59,9 +59,9 @@ sudo systemctl restart httpd
 # composer
 cd /tmp
 curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --force --filename=composer
-sudo chmod +x /usr/local/bin/composer
+sudo chmod +x /usr/bin/composer
 vi ~/.bash_profile
-#   PATH=/usr/local/bin:$PATH
+#   PATH=/usr/bin:$PATH
 # cd /var/www/html/
 # composer init
 # composer require --dev vimeo/psalm
