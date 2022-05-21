@@ -71,8 +71,8 @@ sudo apt install virtualbox -y
 
 #vagrant
 cd /tmp/
-wget https://releases.hashicorp.com/vagrant/2.2.14/vagrant_2.2.14_x86_64.deb
-sudo apt install ./vagrant_2.2.14_x86_64.deb
+wget https://releases.hashicorp.com/vagrant/2.2.19/vagrant_2.2.19_x86_64.deb
+sudo apt install ./vagrant_2.2.19_x86_64.deb
 sudo apt install virtualbox-guest-additions-iso
 sudo visudo
 #   vagrant ALL=(ALL) NOPASSWD:ALL
