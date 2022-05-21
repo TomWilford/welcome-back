@@ -55,6 +55,8 @@ sudo apt install resolvconf
 nano /etc/resolvconf/resolv.conf.d/tail
 # nameserver 1.1.1.1
 # Ctrl + 0    Enter     Ctrl + X
+sudo systemctl enable systemd-resolved.service
+sudo systemctl start systemd-resolved.service
 
 # Commandline Applications
 sudo apt install snapd
