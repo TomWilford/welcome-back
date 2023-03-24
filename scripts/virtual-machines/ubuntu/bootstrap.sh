@@ -12,6 +12,8 @@ sudo LC_ALL=C.UTF-8 add-apt-repository ppa:ondrej/apache2
 
 sudo apt-get install -y apache2
 sudo apt-get install -y php8.2-{curl,mysql,mbstring,intl,zip,xml,memcached}
+sudo apt install -y libapache2-mod-php8.2
+sudo a2enmod php8.2
 
 # install mysql and give password to installer
 sudo debconf-set-selections <<< "mysql-server mysql-server/root_password password $PASSWORD"
@@ -31,10 +33,10 @@ EOF
 )
 echo "${VHOST}" > /etc/apache2/sites-available/000-default.conf
 
-echo " index.php" >> /etc/apache2/mods-enabled/dir.conf
+#echo -n " index.php" >> /etc/apache2/mods-enabled/dir.conf
 
 # enable mod_rewrite
 sudo a2enmod rewrite
 
 # restart apache
-service apache2 restart
+sudo service apache2 restart
