@@ -84,6 +84,18 @@ vagrant reload
 #       sudo vagrant plugin install vagrant-vbguest --plugin-version 0.21
 #       ty to this article https://www.devopsroles.com/vagrant-no-virtualbox-guest-additions-installation-found-fixed/
 
+
+# Docker & Docker Compose
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo add-apt-repository \
+   "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"
+sudo apt update  && sudo apt-get install docker-ce docker-ce-cli containerd.io
+sudo docker run hello-world
+#    check for the latest docker-compose version at https://github.com/docker/compose/releases/
+sudo curl -L "https://github.com/docker/compose/releases/download/2.17.2/docker-compose-linux-x86_64" -o /usr/local/bin/docker-compose
+sudo chmo +x /usr/local/bin/docker-compose
+sudo usermod -aG docker $USER
+
 # Cleanup
 sudo apt-get clean
 
