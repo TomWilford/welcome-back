@@ -1,7 +1,7 @@
 # welcome-back
 Development environment configuration record && || welcome back script.
 
-The scripts set up elementaryOs with a few favourites and usefuls. Followed by my preferred PHP development environment, including:
+The scripts set up some operating systems with a few favourites and usefuls. Followed by my preferred PHP development environment, including:
 - php
 - apache2
 - mysql
