@@ -2,10 +2,7 @@
 Development environment configuration record && || welcome back script.
 
 The scripts set up elementaryOs with a few favourites and usefuls. Followed by my preferred PHP development environment, including:
-- php 7.4
-  - incl. lots of extensions
-  - pear
-  - phing
+- php
 - apache2
 - mysql
 - composer
