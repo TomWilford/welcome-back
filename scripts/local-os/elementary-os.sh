@@ -1,3 +1,4 @@
+# Based on this gist by @georgenaranjo96 https://gist.github.com/georgenaranjo96/0a29f6eb8461f33606a243a637a75bd4
 # PPA for packages
 sudo apt update
 sudo apt install software-properties-common apt-transport-https curl
