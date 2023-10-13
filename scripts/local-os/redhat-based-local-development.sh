@@ -1,20 +1,20 @@
 ###### update OS
-dnf update -y
+sudo dnf update -y
 
 ##### php
-dnf install https://rpms.remirepo.net/fedora/remi-release-$(rpm -E %fedora).rpm
-dnf module enable php:remi-8.2
-dnf install php php-mysqli php-pdo php-curl php-iconv php-json php-mbstring php-gd php-intl php-xml php-zip php-memcached php-zip php-xml
+sudo dnf install https://rpms.remirepo.net/fedora/remi-release-$(rpm -E %fedora).rpm
+sudo dnf module enable php:remi-8.2
+sudo dnf install php php-mysqli php-pdo php-curl php-iconv php-json php-mbstring php-gd php-intl php-xml php-zip php-memcached php-zip php-xml
 php -v
 
 ##### composer
-dnf install composer
+sudi dnf install composer
 composer --version
 
 ##### nodejs
 # Check for latest stream: 
 #     dnf module list nodejs
-dnf module install nodejs:18/common
+sudo dnf module install nodejs:18/common
 
 ##### git
 git config --global user.name "Tom Wilford"
