@@ -8,7 +8,7 @@ sudo dnf install php php-mysqli php-pdo php-curl php-iconv php-json php-mbstring
 php -v
 
 ##### composer
-sudi dnf install composer
+sudo dnf install composer
 composer --version
 
 ##### nodejs
