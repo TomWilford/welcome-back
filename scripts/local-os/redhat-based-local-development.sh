@@ -1,6 +1,9 @@
 ###### update OS
 sudo dnf update -y
 
+###### codecs
+sudo dnf group install Multimedia
+
 ##### php
 sudo dnf install https://rpms.remirepo.net/fedora/remi-release-$(rpm -E %fedora).rpm
 sudo dnf module enable php:remi-8.2
