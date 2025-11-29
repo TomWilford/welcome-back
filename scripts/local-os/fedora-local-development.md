@@ -65,8 +65,8 @@ php -v
 2. [Download JetBrains Toolbox](https://www.jetbrains.com/toolbox-app/download/download-thanks.html?platform=linux)
 3. Go to your downloads folder `cd ~/Downloads`
 4. Install unpack and install Toolbox `tar -xzf jetbrains-toolbox-*.tar.gz && cd jetbrains-toolbox-*/bin && ./jetbrains-toolbox`
-5. Run Toolbox `$HOME/.local/share/JetBrains/Toolbox/bin`
-6. Login/download PhpStorm
+5. Login/download PhpStorm
+6. Ctrl + C in the terminal to quit the app (it's still accessible from the software menu)
 
 ## nodejs
 Check for latest stream `dnf module list nodejs`
