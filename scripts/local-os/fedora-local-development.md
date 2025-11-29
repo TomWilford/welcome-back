@@ -61,10 +61,10 @@ php -v
 4. Remove the script (optional) `rm /tmp/install-composer.sh`
 
 ## PhpStorm
-1. Install AppImage Fuse (if not installed in Fedora Setup) `sudo apt install libfuse2`
+1. Install Fuse `sudo dnf install fuse-libs`
 2. [Download JetBrains Toolbox](https://www.jetbrains.com/toolbox-app/download/download-thanks.html?platform=linux)
 3. Go to your downloads folder `cd ~/Downloads`
-4. Install unpack and install Toolbox `tar -xzf jetbrains-toolbox-<build>.tar.gz && cd jetbrains-toolbox-<build>/bin && ./jetbrains-toolbox`
+4. Install unpack and install Toolbox `tar -xzf jetbrains-toolbox-*.tar.gz && cd jetbrains-toolbox-*/bin && ./jetbrains-toolbox`
 5. Run Toolbox `$HOME/.local/share/JetBrains/Toolbox/bin`
 6. Login/download PhpStorm
 
