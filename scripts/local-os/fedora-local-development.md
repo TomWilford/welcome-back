@@ -2,7 +2,7 @@
 `sudo dnf update -y`
 
 ## Fedora Setup
-Run through any commands in here `https://github.com/devangshekhawat/Fedora-43-Post-Install-Guide`
+Run through any commands you want in here `https://github.com/devangshekhawat/Fedora-43-Post-Install-Guide`
 
 ## SSH Keys
 Best encryption (with passphrase):
@@ -50,6 +50,7 @@ exit $RESULT
 
 ## nodejs
 Check for latest stream `dnf module list nodejs`
+
 `sudo dnf install nodejs`
 
 ## docker
