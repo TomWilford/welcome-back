@@ -21,7 +21,7 @@ cat ~/.ssh/id_ecdsa.pub
 ```bash
 sudo dnf install git
 git config --global user.name "Your Name"
-git config --global user.email "hello@jollyblueman.com"
+git config --global user.email "your_email@example.com"
 ```
 
 ## php
