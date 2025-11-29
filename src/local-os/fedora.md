@@ -6,19 +6,19 @@ Run through any commands required from [this post install guide](https://github.
 
 ## SSH Keys
 Best encryption (with passphrase):
-```bash
+```shell
 ssh-keygen -t ed25519 -C "your_email@example.com"
 cat ~/.ssh/id_ed25519.pub
 ```
 
 Can be more compatible (with passphrase):
-```bash
+```shell
 ssh-keygen -t ecdsa -b 521
 cat ~/.ssh/id_ecdsa.pub
 ```
 
 ## git
-```bash
+```shell
 sudo dnf install git
 git config --global user.name "Your Name"
 git config --global user.email "your_email@example.com"
@@ -26,7 +26,7 @@ git config --global user.email "your_email@example.com"
 
 ## php
 Check [Remi Repo wizard](https://rpms.remirepo.net/wizard/) for latest instructions
-```bash
+```shell
 sudo dnf install https://rpms.remirepo.net/fedora/remi-release-$(rpm -E %fedora).rpm
 sudo dnf config-manager setopt remi.enabled=1
 sudo dnf module reset php
@@ -38,7 +38,7 @@ php -v
 ## composer
 1. Make a temporary installer `vi /tmp/install-composer.sh`
 2. Paste this block
-   ```bash
+   ```shell
    #!/bin/sh
 
    EXPECTED_CHECKSUM="$(php -r 'copy("https://composer.github.io/installer.sig", "php://stdout");')"
@@ -75,21 +75,21 @@ Check for latest stream `dnf module list nodejs`
 
 ## docker
 Install repo and docker
-```bash
+```shell
 sudo dnf install dnf-plugins-core
 sudo dnf config-manager --add-repo https://download.docker.com/linux/fedora/docker-ce.repo
 sudo dnf install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 ```
 
 Start docker now and at startup
-```bash
+```shell
 sudo systemctl start docker
 sudo systemctl enable docker
 ```
 
 ##### docker-compose
 Download RPM from `https://docs.docker.com/desktop/install/fedora/`
-```bash
+```shell
 cd ~/Downloads/
 sudo dnf install ./docker-desktop-<version>-<arch>.rpm
 ```
