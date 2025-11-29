@@ -30,7 +30,7 @@ Check Remi Repo for latest instructions `https://rpms.remirepo.net/wizard/`
 sudo dnf install https://rpms.remirepo.net/fedora/remi-release-$(rpm -E %fedora).rpm
 sudo dnf config-manager setopt remi.enabled=1
 sudo dnf module reset php
-sudo dnf module enable php:remi-8.
+sudo dnf module enable php:remi-8.5
 sudo dnf install php php-mysqli php-pdo php-curl php-iconv php-json php-mbstring php-gd php-intl php-xml php-zip php-memcached
 php -v
 ```
