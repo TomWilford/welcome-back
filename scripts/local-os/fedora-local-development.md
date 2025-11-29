@@ -6,8 +6,11 @@ Run through any commands you want in here `https://github.com/devangshekhawat/Fe
 
 ## SSH Keys
 Best encryption (with passphrase):
+
 `ssh-keygen -t ed25519 -C "your_email@example.com"`
+
 Can be more compatible (with passphrase):
+
 `ssh-keygen -t ecdsa -b 521`
 
 ## git
