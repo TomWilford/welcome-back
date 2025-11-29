@@ -6,12 +6,16 @@ Run through any commands you want in here `https://github.com/devangshekhawat/Fe
 
 ## SSH Keys
 Best encryption (with passphrase):
-
-`ssh-keygen -t ed25519 -C "your_email@example.com"`
+```bash
+ssh-keygen -t ed25519 -C "your_email@example.com"
+cat ~/.ssh/id_ed25519.pub
+```
 
 Can be more compatible (with passphrase):
-
-`ssh-keygen -t ecdsa -b 521`
+```bash
+ssh-keygen -t ecdsa -b 521
+cat ~/.ssh/id_ecdsa.pub
+```
 
 ## git
 ```bash
